@@ -15,3 +15,28 @@ build-backend = "hatchling.build"
 
 [tool.hatch.version]
 path = "src/vbt_flow/__init__.py"
+
+[tool.uv]
+dev-dependencies = [
+    "commitizen>=3.29.1",
+    "mypy>=1.12.1",
+    "pytest>=8.3.3",
+    "ruff>=0.7.0",
+]
+
+[tool.ruff.lint]
+select = ["F", "E", "I", "N", "UP", "A", "C4", "RUF"]
+
+[tool.mypy]
+exclude = [".venv"]
+
+ignore_missing_imports = true
+disallow_any_generics = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[tool.commitizen]
+version = "0.1.0"
+version_files = ["src/vbt_flow/__init__.py"]
+update_changelog_on_bump = true
