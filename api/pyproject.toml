@@ -4,10 +4,7 @@ dynamic = ["version"]
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
-
-[project.scripts]
-serve = "vbt_flow:main"
+dependencies = ["fastapi[standard]>=0.115.3"]
 
 [build-system]
 requires = ["hatchling"]
